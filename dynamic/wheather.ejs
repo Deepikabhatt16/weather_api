@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheather_App</title>
+    <link rel="stylesheet" href="wheather.css">
+    <script src="https://kit.fontawesome.com/d64d505cfa.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1 class="head">Weather App</h1>
+    <div class="container">
+        <form action="/submit" method="post">
+            
+            <div class="main">
+                <input class="bar" type="text" name="input" placeholder="enter the city name">
+                <input class="btn" type="submit" value="search" formaction="/submit">
+                            </div>
+    
+<div class="middle">
+<h1> <%=locals.temp%>°C</h1>
+<h2> <%=locals.city%></h2>
+</div>
+           
+<div class="bottom">
+
+    <div class="one">
+    <div class="humidity" >
+        <img class="icon" src="/img/humidity.jpg" >
+       <p><%=locals.humidity%>% </p> 
+    </div>
+    <h4>Humidity</h4>
+</div>
+<div class="one">
+    <div class="wind">
+        <img class="icon" src="/img/wind.png" >
+
+       <p> <%=locals.wind%>km/h
+  </p>
+</div>
+<h4>wind-speed</h4>
+    </div>
+    </div>
+
+        </form>
+        </div>
+</body>
+
+</html>
